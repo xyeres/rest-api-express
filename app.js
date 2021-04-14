@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 const routes = require('./routes');
 
+// JSON-ify requests
 app.use(express.json());
+// Set routes to flow throw API versioning endpoint
 app.use('/api/v1', routes);
 
 
